@@ -1,0 +1,38 @@
+[
+  {
+    "remote": "github",
+    "repository": "adt1-dev/android_hardware_marvell_wlan",
+    "target_path": "hardware/marvell/wlan"
+    "revision": "n"
+  },
+  {
+    "remote": "github",
+    "repository": "adt1-dev/android_kernel_google_molly",
+    "target_path": "kernel/google/molly"
+    "revision": "upstream-n" 
+  },
+  {
+    "remote": "github",
+    "repository": "adt1-dev/MollyLED",
+    "target_path": "packages/apps/MollyLED"
+    "revision": "release_1.0"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_nvidia_power",
+    "target_path": "hardware/nvidia/power"
+    "revision": "cm-14.1"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_nvidia_thermal",
+    "target_path": "hardware/nvidia/thermal"
+    "revision": "cm-14.1"
+  },
+  {
+    "remote": "github",
+    "repository": "adt1-dev/proprietary_vendor_google",
+    "target_path": "vendor/google/molly"
+    "revision": "n"
+  }
+] 
