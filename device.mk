@@ -21,11 +21,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.com.widevine.cachesize=16777216
 
+# Power HAL
+PRODUCT_PACKAGES += \
+    power.tegra4
+
 # Stagefright
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
     persist.sys.media.avsync=true \
     media.aac_51_output_enabled=true
+
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    thermal.tegra4
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
