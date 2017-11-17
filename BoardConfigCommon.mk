@@ -47,6 +47,8 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 1
 
 # Kernel
 BOARD_KERNEL_CMDLINE :=  androidboot.hardware=molly console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N
+TARGET_KERNEL_SOURCE := kernel/google/molly
+TARGET_KERNEL_CONFIG := molly_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
