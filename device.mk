@@ -47,8 +47,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.implicit_checks=none
+
+$(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.wipe_on_crypt_fail=1 \
     drm.service.enabled=true \
     ro.com.widevine.cachesize=16777216
 
