@@ -16,6 +16,10 @@
 # Inherit Vendor
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 
+# AAPT configuration
+PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # AppWidget permission needed to prevent a Launcher crash.
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml
