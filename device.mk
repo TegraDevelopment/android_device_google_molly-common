@@ -15,3 +15,14 @@
 
 # Inherit Vendor
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    ro.com.widevine.cachesize=16777216
+
+# Stagefright
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.cache-params=10240/20480/15 \
+    persist.sys.media.avsync=true \
+    media.aac_51_output_enabled=true
