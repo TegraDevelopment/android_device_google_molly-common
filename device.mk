@@ -16,6 +16,20 @@
 # Inherit Vendor
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 
+# Audio
+PRODUCT_PACKAGES += \
+    libtinyalsa \
+    audio.primary.molly \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio.a2dp.default \
+    libaudiopolicymanager
+
+USE_CUSTOM_AUDIO_POLICY := 1
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
