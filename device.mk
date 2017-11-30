@@ -16,6 +16,10 @@
 # Inherit Vendor
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 
+# AppWidget permission needed to prevent a Launcher crash.
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     libtinyalsa \
