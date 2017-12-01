@@ -38,6 +38,10 @@ USE_CUSTOM_AUDIO_POLICY := 1
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 
+# Boot Animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
 # Codecs
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
