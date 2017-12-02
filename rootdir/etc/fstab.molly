@@ -7,6 +7,8 @@
 /dev/block/platform/sdhci-tegra.3/by-name/system      /system             ext4      ro                                                    wait
 /dev/block/platform/sdhci-tegra.3/by-name/cache       /cache              ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait,check
 /dev/block/platform/sdhci-tegra.3/by-name/userdata    /data               ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait,check,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/crypto
+/dev/block/platform/sdhci-tegra.3/by-name/cache       /cache              f2fs      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait,check
+/dev/block/platform/sdhci-tegra.3/by-name/userdata    /data               f2fs      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait,check,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/crypto
 /dev/block/platform/sdhci-tegra.3/by-name/misc        /misc               emmc      defaults                                              defaults
 /dev/block/platform/sdhci-tegra.3/by-name/boot        /boot               emmc      defaults                                              defaults
 /dev/block/platform/sdhci-tegra.3/by-name/recovery    /recovery           emmc      defaults                                              defaults

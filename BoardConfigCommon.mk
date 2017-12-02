@@ -59,6 +59,7 @@ MALLOC_SVELTE := true
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
@@ -79,6 +80,11 @@ BOARD_SEPOLICY_DIRS := \
 
 # System Properties
 TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
+
+#TWRP (optional)
+ifeq ($(WITH_TWRP),true)
+-include $(COMMON_PATH)/twrp.mk
+endif
 
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
