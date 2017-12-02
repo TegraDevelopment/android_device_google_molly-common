@@ -49,3 +49,6 @@ allow system_server hwui_prop:file { getattr open read };
 
 # Miscelanious system_server fixes
 allow system_server unlabeled:file unlink; 
+
+# Access dvb device
+allow system_server dvb_device:chr_file rw_file_perms;
