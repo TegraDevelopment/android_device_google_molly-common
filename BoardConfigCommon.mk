@@ -80,6 +80,11 @@ BOARD_SEPOLICY_DIRS := \
 # System Properties
 TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
+#TWRP (optional)
+ifeq ($(WITH_TWRP),true)
+-include $(COMMON_PATH)/twrp.mk
+endif
+
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211

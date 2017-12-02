@@ -1,0 +1,20 @@
+# FSTAB
+PRODUCT_COPY_FILES += $(COMMON_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
+# Recovery
+RECOVERY_VARIANT := twrp
+LZMA_RAMDISK_TARGETS := recovery
+
+# TWRP
+DEVICE_RESOLUTION := 1920x1080
+TW_THEME := landscape_hdpi
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_SCREEN_TIMEOUT := true
+TW_NO_CPU_TEMP := true
+TW_EXCLUDE_MTP := true
+TW_INCLUDE_NTFS_3G := true
+TW_EXCLUDE_SUPERSU := true
+TW_EXTRA_LANGUAGES := true
+TW_BRIGHTNESS_PATH := "/brightness"

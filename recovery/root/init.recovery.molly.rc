@@ -1,0 +1,9 @@
+import init.recovery.molly.led.rc
+
+on init
+
+    # Disable mollyled's "pulsing" value
+    write /sys/devices/platform/molly-led/pulsing 0
+
+    # The flashing LED colors in recovery mode is kinda weird, so let's just make it green!
+    setprop sys.molly.led.green 255
