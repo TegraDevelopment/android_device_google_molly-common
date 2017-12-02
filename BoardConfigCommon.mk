@@ -42,6 +42,12 @@ TARGET_NO_RADIOIMAGE := true
 # Camera
 USE_CAMERA_STUB := true
 
+# DRM
+# The security level of the content protection provided by the Widevine DRM plugin depends
+# on the security capabilities of the underlying hardware platform.
+# There are Level 1/2/3. To run HD contents, should be Widevine level 1 security, which must be hardware backed.
+BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
+
 # Fonts (includes additional fonts)
 EXTENDED_FONT_FOOTPRINT := true
 
