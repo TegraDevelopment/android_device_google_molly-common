@@ -1,0 +1,5 @@
+# allow priv_app permissions
+allow priv_app device:dir read;
+allow priv_app hwui_prop:file read;
+allow priv_app system_app_data_file:dir getattr;
+allow priv_app throughput_device:chr_file { read write };
