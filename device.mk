@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 
+# Widevine shim
+PRODUCT_PACKAGES += \
+    libwvm_shim
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
