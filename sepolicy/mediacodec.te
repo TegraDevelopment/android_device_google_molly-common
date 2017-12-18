@@ -1,0 +1,2 @@
+# Allow Media Codec Access
+allow mediacodec sysfs:file { open read };
