@@ -26,3 +26,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
     persist.sys.media.avsync=true \
     media.aac_51_output_enabled=true
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/wifi_loader.sh:system/bin/wifi_loader.sh \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.sh:system/bin/wpa_supplicant.sh \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+
+
+PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0

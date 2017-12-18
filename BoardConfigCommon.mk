@@ -23,6 +23,11 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a15
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_MRVL := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= $(COMMON_PATH)/bluetooth
+
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := molly
 TARGET_BOARD_PLATFORM := tegra4
@@ -43,3 +48,13 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # System Properties
 TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
+
+# Wifi related defines
+BOARD_HAVE_MARVELL_WIFI          := true
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mrvl
+BOARD_WLAN_DEVICE                := mrvl
+CONFIG_CTRL_IFACE                := y
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mrvl
