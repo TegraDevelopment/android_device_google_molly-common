@@ -54,6 +54,9 @@ BOARD_KERNEL_CMDLINE :=  androidboot.hardware=molly console=ttyFIQ0 smsc95xx.boo
 TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := molly_defconfig
 
+# Malloc memory configuration
+MALLOC_SVELTE := true
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
