@@ -113,6 +113,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     thermal.tegra4
 
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
